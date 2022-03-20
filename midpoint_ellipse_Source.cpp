@@ -47,7 +47,7 @@ void ellipse()
 		y = y - 1;
 		if (d2 > 0)
 		{
-			dy = dy + 2 * (rx * rx);
+			dy = dy - 2 * (rx * rx);
 			d2 = d2 - 2*y*rx*rx + (rx * rx);
 		}
 		else
