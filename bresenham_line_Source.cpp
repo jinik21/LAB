@@ -10,7 +10,7 @@ void bres(int x1, int y1, int x2, int y2)
     dy = y2 - y1;
     p = 2 *(dy)-(dx);
     glBegin(GL_POINTS);
-    glColor3f(1, 0, 0);
+    glColor3f(1, 1, 1);
     glVertex2i(x1, y1);
     glEnd();
     int x = x1;
@@ -28,14 +28,14 @@ void bres(int x1, int y1, int x2, int y2)
             p = p + 2 * (dy - dx);
         }
         glBegin(GL_POINTS);
-        glColor3f(1, 0, 0);
+        glColor3f(1, 1, 1);
         glVertex2i(x, y);
         glEnd();
     }
 }
 void init()
 {
-    glClearColor(1.0, 1.0, 1.0, 0.0); //white color window
+    glClearColor(0.0, 0.0, 0.0, 0.0); //white color window
     glMatrixMode(GL_PROJECTION);
     gluOrtho2D(0, 500, 0, 800);
 }

@@ -22,21 +22,20 @@ void midPointCircleAlgo()
 {
 	int x = 0;
 	int y = r;
-	float decision = 5 / 4 - r;
+	float d1 = 5 / 4 - r;
 
 	while (y >= x)
 	{
-		plotpoint(x, y); 
-		if (decision < 0)
+		plot_point(x, y); 
+		x++;
+		if (d1 < 0)
 		{
-			x++;
-			decision += 2 * x + 3;
+			d1 += 2 * x + 3;
 		}
 		else
 		{
 			y--;
-			x++;
-			decision += 2 * (x - y) + 5;
+			d1 += 2 * (x - y) + 5;
 		}
 	}
 }
@@ -48,7 +47,7 @@ void display(void)
 	glColor3f(1, 0, 0);
 	glPointSize(2.0);
 	glMatrixMode(GL_PROJECTION);
-	gluOrtho2D(0.0, 400.0, 0.0, 200.0); 
+	gluOrtho2D(0.0, 800.0, 0.0, 400.0); 
 
 	midPointCircleAlgo();
 

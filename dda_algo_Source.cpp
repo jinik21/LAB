@@ -4,19 +4,15 @@ using namespace std;
 
 void drawLine(int x0, int y0, int x1, int y1) 
 {
-	glClear(GL_COLOR_BUFFER_BIT);
 	float dy, dx, step, x, y, k, Xin, Yin;
 	dx = x1 - x0;
 	dy = y1 - y0;
-
 	if (abs(dx) >= abs(dy))
 		step = abs(dx);
 	else
 		step = abs(dy);
-
 	Xin = dx / step;
 	Yin = dy / step;
-
 	x = x0;
 	y = y0;
 	glBegin(GL_POINTS);
@@ -34,7 +30,6 @@ void drawLine(int x0, int y0, int x1, int y1)
 		glVertex2i(x, y);
 		glEnd();
 	}
-
 	glFlush();
 }
 
