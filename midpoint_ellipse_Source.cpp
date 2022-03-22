@@ -13,19 +13,6 @@ void plot_point(int x, int y)
 	glVertex2i(xcenter - x, ycenter + y);
 	glEnd();
 }
-// void plot_point_r2(int x, int y)
-// {
-// 	glBegin(GL_POINTS);
-// 	// glVertex2i(xcenter + x, ycenter + y);
-// 	// glVertex2i(xcenter + x, ycenter - y);
-// 	// glVertex2i(xcenter - x, ycenter - y);
-// 	// glVertex2i(xcenter - x, ycenter + y);
-// 	glVertex2i(xcenter - y, ycenter + x);
-// 	glVertex2i(xcenter - y, ycenter - x);
-// 	glVertex2i(xcenter + y, ycenter + x);
-// 	glVertex2i(xcenter + y, ycenter - x);
-// 	glEnd();
-// }
 void ellipse()
 {
 	float dx, dy, d1, d2, x, y;
